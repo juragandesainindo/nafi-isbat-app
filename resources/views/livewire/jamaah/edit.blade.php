@@ -24,11 +24,15 @@
                             <label for="jk">Jenis Kelamin</label>
                         </div>
                         <div class="col-9">
-                            <input type="radio" name="jk" value="L" id="laki_laki" checked>
-                            <label for="laki_laki"><span class="font-weight-normal">Laki-Laki</span></label>
+                            <input type="radio" name="jk" value="L" id="laki_laki" {{ $jamaah->jk == 'L'
+                            ? 'checked'
+                            : '' }}>
+                            <label for="laki_laki">Laki-Laki</label>
                             &nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="jk" value="P" id="perempuan">
-                            <label for="perempuan"><span class="font-weight-normal">Perempuan</span></label>
+                            <input type="radio" name="jk" value="P" id="perempuan" {{ $jamaah->jk == 'P'
+                            ? 'checked'
+                            : '' }}>
+                            <label for="perempuan">Perempuan</label>
                         </div>
                     </div>
                 </div>
@@ -48,8 +52,7 @@
                             <label for="tender">Tender</label>
                         </div>
                         <div class="col-9">
-                            <input type="text" id="tender currency-field" data-type="currency" class="form-control"
-                                placeholder="tender" autofocus>
+                            <input type="text" id="tender" class="form-control" placeholder="tender" autofocus>
                         </div>
                     </div>
                 </div>

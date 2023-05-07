@@ -38,7 +38,7 @@
                                             <th>Nama</th>
                                             <th>JK</th>
                                             <th>Alamat</th>
-                                            <th>Tender</th>
+                                            <th>Tender (Rp)</th>
                                             <th></th>
                                         </tr>
                                     </thead>

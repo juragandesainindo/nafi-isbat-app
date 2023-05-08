@@ -10,7 +10,7 @@
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
         <li class="nav-item">
-            Sistem Nafi Isbat
+            SINAFIS (Sistem Nafi Isbat)
         </li>
     </ul>
 </nav>

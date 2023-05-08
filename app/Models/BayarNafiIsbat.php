@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Jamaah extends Model
+class BayarNafiIsbat extends Model
 {
     use HasFactory;
+
     protected $guarded = [];
 
-    public function bayarNafiIsbat()
+    public function jamaah()
     {
-        return $this->hasMany(BayarNafiIsbat::class);
+        return $this->belongsTo(Jamaah::class);
     }
 }

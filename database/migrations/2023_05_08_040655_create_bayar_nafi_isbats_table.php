@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateJamaahsTable extends Migration
+class CreateBayarNafiIsbatsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,12 @@ class CreateJamaahsTable extends Migration
      */
     public function up()
     {
-        Schema::create('jamaahs', function (Blueprint $table) {
+        Schema::create('bayar_nafi_isbats', function (Blueprint $table) {
             $table->id();
-            $table->string('nama');
-            $table->string('slug');
-            $table->string('jk', 10);
-            $table->string('alamat');
-            $table->string('tender')->default(0);
+            $table->string('bayar');
+            $table->bigInteger('jamaah_id')->unsigned();
             $table->timestamps();
+            $table->foreign('jamaah_id')->references('id')->on('jamaahs')->onDelete('cascade');
         });
     }
 
@@ -31,6 +29,6 @@ class CreateJamaahsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('jamaahs');
+        Schema::dropIfExists('bayar_nafi_isbats');
     }
 }

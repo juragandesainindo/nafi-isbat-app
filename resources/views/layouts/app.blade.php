@@ -30,11 +30,9 @@
         {{ $slot }}
         <!-- /.content-wrapper -->
         <footer class="main-footer">
-            <div class="float-right d-none d-sm-block">
-                <b>Version</b> 3.2.0-rc
-            </div>
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights
-            reserved.
+            <strong>Copyright &copy; 2023-{{ date('Y') }} | All
+                rights
+                reserved.
         </footer>
 
         <!-- Control Sidebar -->
@@ -55,6 +53,8 @@
     <script src="{{ asset('/') }}plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('/') }}dist/js/adminlte.min.js"></script>
+
+
 
     <script>
         // Jquery Dependency
@@ -143,6 +143,8 @@
             input[0].setSelectionRange(caret_pos, caret_pos);
             }
     </script>
+
+    @stack('js')
 </body>
 
 </html>

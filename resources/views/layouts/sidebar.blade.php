@@ -24,18 +24,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('jamaah') }}" class="nav-link {{ request()->is('jamaah') ? 'active' : '' }}">
+                    <a href="{{ route('jamaah') }}" class="nav-link {{ request()->is('jamaah*') ? 'active' : '' }}">
                         <i class="nav-icon fas fa-user"></i>
                         <p>
                             Jamaah
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="/bayar" class="nav-link {{ request()->is('/bayar') ? 'active' : '' }}">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
-                        <p>
-                            Bayar
                         </p>
                     </a>
                 </li>

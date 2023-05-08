@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Livewire\BayarNafiIsbat;
 use App\Http\Livewire\HomeLivewire;
+use App\Http\Livewire\JamaahBayar;
 use App\Http\Livewire\JamaahLivewire;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,4 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/', HomeLivewire::class);
 Route::get('jamaah', JamaahLivewire::class)->name('jamaah');
+Route::get('jamaah-bayar/{id}', JamaahBayar::class)->name('jamaah.show');
